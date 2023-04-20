@@ -7,9 +7,9 @@ using SalesWebMvc2019.Models;
 
 namespace SalesWebMvc2019.Models.SalesWebMvc
 {
-    public class Context : DbContext
+    public class SalesWebMvc2019Context : DbContext
     {
-        public Context (DbContextOptions<Context> options)
+        public SalesWebMvc2019Context (DbContextOptions<SalesWebMvc2019Context> options)
             : base(options)
         {
         }
