@@ -14,14 +14,15 @@ namespace SalesWebMvc2019.Controllers
         private readonly SellerService _sellerService;
         private readonly DepartmentService _departmentService;
 
-        public SellersController(SellerService sellerservice, DepartmentService departmentService)
+        public SellersController(SellerService sellerService, DepartmentService departmentService)
         {
-            _sellerService = sellerservice;
+            _sellerService = sellerService;
             _departmentService = departmentService;
         }
+
         public IActionResult Index()
         {
-            var list = _sellerService.Findall();
+            var list = _sellerService.FindAll();
             return View(list);
         }
 
@@ -42,16 +43,16 @@ namespace SalesWebMvc2019.Controllers
 
         public IActionResult Delete(int? id)
         {
-          /*  if (id == null)
+            if (id == null)
             {
                 return NotFound();
-            }*/
+            }
 
             var obj = _sellerService.FindById(id.Value);
-           /* if (obj == null)
+            if (obj == null)
             {
                 return NotFound();
-            }*/
+            }
 
             return View(obj);
         }

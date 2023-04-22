@@ -16,10 +16,9 @@ namespace SalesWebMvc2019.Services
             _context = context;
         }
 
-        public List<Seller> Findall()
+        public List<Seller> FindAll()
         {
             return _context.Seller.ToList();
-
         }
 
         public void Insert(Seller obj)
@@ -38,6 +37,7 @@ namespace SalesWebMvc2019.Services
             var obj = _context.Seller.Find(id);
             _context.Seller.Remove(obj);
             _context.SaveChanges();
+
         }
 
 
