@@ -12,7 +12,8 @@ namespace SalesWebMvc2019.Data
     {
 
         private SalesWebMvc2019Context _context;
-        public SeedingService (SalesWebMvc2019Context context)
+
+        public SeedingService(SalesWebMvc2019Context context)
         {
             _context = context;
         }
@@ -23,11 +24,11 @@ namespace SalesWebMvc2019.Data
                 _context.Seller.Any() ||
                 _context.SalesRecord.Any())
             {
-                return; //DB has bem seeded
+                return; // DB has been seeded
             }
 
             Department d1 = new Department(1, "Computers");
-            Department d2 = new Department(2, "Eletronics");
+            Department d2 = new Department(2, "Electronics");
             Department d3 = new Department(3, "Fashion");
             Department d4 = new Department(4, "Books");
 

@@ -17,7 +17,7 @@ namespace SalesWebMvc2019.Services
         public List<Department> FindAll()
         {
             return _context.Department.OrderBy(x => x.Name).ToList();
-        }
 
+        }
     }
 }

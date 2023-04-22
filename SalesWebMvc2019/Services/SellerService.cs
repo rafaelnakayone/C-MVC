@@ -19,7 +19,6 @@ namespace SalesWebMvc2019.Services
         public List<Seller> FindAll()
         {
             return _context.Seller.ToList();
-
         }
 
         public void Insert(Seller obj)

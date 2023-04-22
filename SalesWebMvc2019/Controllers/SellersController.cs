@@ -14,11 +14,12 @@ namespace SalesWebMvc2019.Controllers
         private readonly SellerService _sellerService;
         private readonly DepartmentService _departmentService;
 
-        public SellersController(SellerService sellerservice, DepartmentService departmentService)
+        public SellersController(SellerService sellerService, DepartmentService departmentService)
         {
-            _sellerService = sellerservice;
+            _sellerService = sellerService;
             _departmentService = departmentService;
         }
+
         public IActionResult Index()
         {
             var list = _sellerService.FindAll();
